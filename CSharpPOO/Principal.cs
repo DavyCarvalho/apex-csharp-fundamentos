@@ -1,5 +1,6 @@
 ﻿using CSharpPOO.Objetos;
 using CSharpPOO.Polimorfismo;
+using CSharpPOO2;
 //um Namespace é um contexto próprio fechado com suas ferramentas,
 //exemplo disso é o System que contem ferramentas como a classe Console
 //que tem diversas funçoes que vimos na aula passada, quando
@@ -18,12 +19,16 @@ namespace CSharpPOO
         static void Main(string[] args)
         {
             // Classes e Objetos - Início
-            //Pessoa pessoa = new Pessoa();
+            Pessoa pessoa = new Pessoa();
 
-            //pessoa.DiaNascimento = new DateTime(1992, 02, 23);
-            //pessoa.Endereco = "Rua Lauro Muller 370";
             //pessoa.Nome = "Gustavo Rosaro";
+            //pessoa.Endereco = "Rua Lauro Muller 370";
+            //pessoa.DiaNascimento = new DateTime(1992, 02, 23);
             //pessoa.Idade = 27;
+
+            //Pessoa pessoa2 = new Pessoa("Davy","Rua Itajai 4880", 89, new DateTime(1999,01,11));
+
+            //string nomeDaPessoa = pessoa2.Nome;
 
             //Todos os valores estarão vazios pois criamos um objeto do tipo pessoa,
             //mas nao atribuímos valores às suas propriedades
@@ -32,7 +37,11 @@ namespace CSharpPOO
             //Console.WriteLine(pessoa.Idade);
             //Console.WriteLine(pessoa.Endereco);
 
-            //pessoa.Cadastrar("Gustavo Rosauro", "Rua Lauro Muller 370", 27, new DateTime(1992, 02, 23));
+            pessoa.Cadastrar(
+                "Gustavo Rosauro", 
+                "Rua Lauro Muller 370", 
+                27, 
+                new DateTime(1992, 02, 23));
 
             //Após cadastradas as informações do objeto podemos acessa-las
             //Console.WriteLine(pessoa.DiaNascimento);
@@ -46,7 +55,7 @@ namespace CSharpPOO
 
             // Herança - Início
 
-            //Aluno aluno = new Aluno();
+            Aluno aluno = new Aluno();
 
             // Como a classe Aluno herda tudo de pessoa, é possivel usarmos o método Cadastrar
             // contido na classe Pessoa
@@ -59,9 +68,6 @@ namespace CSharpPOO
             //aluno.Endereco = "Rua Itajaí, 5000";
             //aluno.Idade = 24;
             //aluno.DiaNascimento = new DateTime(1999, 02, 23);
-            //aluno.NumeroMatricula = 1234567;
-            //aluno.CursoMatriculado = "C# Fundamentos";
-            //aluno.Escola = "Apex";
 
             //Console.WriteLine(aluno.Nome);
             //Console.WriteLine(aluno.Endereco);
@@ -78,7 +84,7 @@ namespace CSharpPOO
             // Lembrando do vimos sobre vetores/arrays, vimos que eles apenas podem
             // conter valores do mesmo tipo, o código da linha abaixo não ira compilar 
             // pois string é != de int
-            
+
             //int[] arrayDeNumeros = new int[] { 1,2,3, "texto" };
 
             // Já aqui criamos um array de 2 posições do tipo Veiculo,
@@ -87,14 +93,19 @@ namespace CSharpPOO
             // do tipo Veiculo? Isso é possivel por que as classes Barco
             // e Automovel HERDAM todas as caracteriscas de Veiculo,
             // se removermos a herança de uma delas o código não ira compilar
-            
-            //Veiculo[] veiculo = new Veiculo[2];
 
-            //veiculo[0] = new Automovel("BMW");
-            //veiculo[1] = new Barco("Phantom");
+            // Veiculo[] veiculo = new Veiculo[2];
+
+            // veiculo[0] = new Automovel("BMW");
+            // veiculo[1] = new Barco("Phantom");
 
             //MovimentarVeiculo(veiculo[0]);
             //MovimentarVeiculo(veiculo[1]);
+
+            //Barco barco = new Barco("Lancha");
+
+            //barco.Mover();
+            //barco.Parar();
 
             //Console.WriteLine("Pressione Enter para os veículos pararem. ");
             //Console.ReadLine();
@@ -110,6 +121,7 @@ namespace CSharpPOO
             //Console.WriteLine("Digite o modo como você deseja parar o Automovel.");
             //string modo = Console.ReadLine(); //Exemplo: "Muito depressa.".
 
+            //auto.Parar();
             //auto.Parar(modo);
 
             //Console.Read();

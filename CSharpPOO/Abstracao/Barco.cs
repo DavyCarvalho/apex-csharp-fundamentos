@@ -17,5 +17,10 @@ namespace CSharpPOO.Abstracao
         {
             Console.WriteLine("Atracando BARCO no porto.");
         }
+
+        //public void TentarInstanciarClasseAbstrata()
+        //{
+        //    Veiculo auto = new Veiculo();
+        //}
     }
 }

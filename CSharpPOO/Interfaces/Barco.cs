@@ -9,6 +9,8 @@ namespace CSharpPOO.Interfaces
     // e notar a mensagem de erro na classe Barco!
     public class Barco : IVeiculo
     {
+        public int Prop { get; set; }
+
         public void Mover()
         {
             Console.WriteLine("O barco está se movendo!");
@@ -17,6 +19,11 @@ namespace CSharpPOO.Interfaces
         public void Parar()
         {
             Console.WriteLine("O barco está parando!");
+        }
+
+        public int CavalosDePotencia(bool eHTurbo)
+        {
+            throw new NotImplementedException();
         }
     }
 }
