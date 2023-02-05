@@ -2,9 +2,16 @@
 {
     public class Exercicio4 : IExercicio4
     {
+        public double ValorGastoNoJantar { get; set; }
+
+        public Exercicio4(double valorGastoNoJantar)
+        {
+            ValorGastoNoJantar = valorGastoNoJantar;
+        }
+
         public void ImprimirValorDaContaComGorjetaDeDezPorcento()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

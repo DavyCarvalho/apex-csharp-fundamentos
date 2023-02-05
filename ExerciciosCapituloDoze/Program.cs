@@ -4,6 +4,7 @@ using ExerciciosCapituloDoze.ClassesAuxiliares;
 using ExerciciosCapituloDoze.Exercicios.Exercicio01;
 using ExerciciosCapituloDoze.Exercicios.Exercicio02;
 using ExerciciosCapituloDoze.Exercicios.Exercicio03;
+using ExerciciosCapituloDoze.Exercicios.Exercicio04;
 
 namespace ExerciciosCapituloDoze
 {
@@ -220,9 +221,9 @@ namespace ExerciciosCapituloDoze
             Console.WriteLine("Insira abaixo o valor gasto no jantar.");
             double valorGastoNoJantar = double.Parse(Console.ReadLine());
 
-            //Exercicio4 exercicio4 = new Exercicio4(valorGastoNoJantar);
+            Exercicio4 exercicio4 = new Exercicio4(valorGastoNoJantar);
 
-            //exercicio3.ImprimirValorDaContaComGorjetaDeDezPorcento();
+            exercicio4.ImprimirValorDaContaComGorjetaDeDezPorcento();
 
             Console.WriteLine("---------------------------------------------\n");
         }

@@ -1,4 +1,6 @@
-﻿namespace ExerciciosCapituloDoze.Exercicios.Exercicio02
+﻿using System;
+
+namespace ExerciciosCapituloDoze.Exercicios.Exercicio02
 {
     public class Exercicio2 : IExercicio2
     {
@@ -11,7 +13,9 @@
 
         public void ImprimirValorComDesconto()
         {
+            double valorDoDesconto = ValorDoProduto * 9 / 100;
 
+            Console.WriteLine($"O valor com desconto é: {Math.Round(ValorDoProduto - valorDoDesconto, 2)}");
         }
     }
 }
