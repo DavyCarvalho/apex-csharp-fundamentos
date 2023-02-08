@@ -27,6 +27,6 @@ namespace Capitulo11CSharpPOO.Abstracao
 // 2º Classes abstratas podem ser herdadas e esse é seu propósito.
 // 3º Uma classe abstrata pode conter métodos comuns, somente será obrigatórios para as classes filhas implementar os métodos abstratos.
 //  *Remover um método sobrescrito de uma das classes filhas para entender!
-// 4º Um método marcado como abstract já é virtual, então não podemos adicionar a palavra abstract na sua assinatura.
+// 4º Um método marcado como abstract já é virtual, então não podemos adicionar a palavra virtual na sua assinatura.
 // 5º Por ser um método virtual é obrigatório o uso de overrides nos métodos das classes filhas.
 //  *Remover o termo override de uma das classes filhas para entender!

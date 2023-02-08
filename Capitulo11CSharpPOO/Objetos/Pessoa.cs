@@ -57,15 +57,15 @@ namespace Capitulo11CSharpPOO.Objetos
         // não poderemos alterar os valores livremente pela notação ponto
         // (algo como 'objeto.prop = umValorQualquer' não será possivel)
 
-        //public string Nome { get; private set; }
-        //public string Endereco { get; private set; }
-        //public int Idade { get; private set; }
-        //public DateTime DiaNascimento { get; private set; }
+        public string Nome { get; private set; }
+        public string Endereco { get; private set; }
+        public int Idade { get; private set; }
+        public DateTime DiaNascimento { get; private set; }
 
-        public string Nome { get; set; }
-        public string Endereco { get; set; }
-        public int Idade { get; set; }
-        public DateTime DiaNascimento { get; set; }
+        //public string Nome { get; set; }
+        //public string Endereco { get; set; }
+        //public int Idade { get; set; }
+        //public DateTime DiaNascimento { get; set; }
 
         public void Cadastrar(string nome, string endereco, int idade, DateTime nascimento)
         {
@@ -92,6 +92,7 @@ namespace Capitulo11CSharpPOO.Objetos
         //{ }
 
         //public void Andar()
-        //{ }
+        //{
+        //}
     }
 }
