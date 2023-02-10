@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo11CSharpPOO", "Capitulo11CSharpPOO\Capitulo11CSharpPOO.csproj", "{454F53AA-65B9-418A-9144-4C98E0192C7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo11CSharpPOO", "Capitulo11CSharpPOO\Capitulo11CSharpPOO.csproj", "{454F53AA-65B9-418A-9144-4C98E0192C7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo11CSharpPOO2", "Capitulo11CSharpPOO2\Capitulo11CSharpPOO2.csproj", "{C20E94A8-EC28-4B49-8D4A-29EBEF625970}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo11CSharpPOO2", "Capitulo11CSharpPOO2\Capitulo11CSharpPOO2.csproj", "{C20E94A8-EC28-4B49-8D4A-29EBEF625970}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo13TratamentoDeErros", "Capitulo13TratamentoDeErros\Capitulo13TratamentoDeErros.csproj", "{CF2FBE64-6620-404A-9225-339E94B04BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo13TratamentoDeErros", "Capitulo13TratamentoDeErros\Capitulo13TratamentoDeErros.csproj", "{CF2FBE64-6620-404A-9225-339E94B04BBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo14TrabalhandoComArquivosDeTexto", "Capitulo14TrabalhandoComArquivosDeTexto\Capitulo14TrabalhandoComArquivosDeTexto.csproj", "{14D46367-3F6A-4E40-B1B5-54C7148E2660}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo14TrabalhandoComArquivosDeTexto", "Capitulo14TrabalhandoComArquivosDeTexto\Capitulo14TrabalhandoComArquivosDeTexto.csproj", "{14D46367-3F6A-4E40-B1B5-54C7148E2660}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo15a17ConectandoAoSqlServer", "Capitulo15a17ConectandoAoSqlServer\Capitulo15a17ConectandoAoSqlServer.csproj", "{6805BB25-9790-4329-902E-F72C37A10BF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo15a17ConectandoAoSqlServer", "Capitulo15a17ConectandoAoSqlServer\Capitulo15a17ConectandoAoSqlServer.csproj", "{6805BB25-9790-4329-902E-F72C37A10BF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo12Exercicios", "Capitulo12Exercicios\Capitulo12Exercicios.csproj", "{D9E4F491-2E12-4CA3-9CAA-F4998FEA3FA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6805BB25-9790-4329-902E-F72C37A10BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6805BB25-9790-4329-902E-F72C37A10BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6805BB25-9790-4329-902E-F72C37A10BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E4F491-2E12-4CA3-9CAA-F4998FEA3FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E4F491-2E12-4CA3-9CAA-F4998FEA3FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E4F491-2E12-4CA3-9CAA-F4998FEA3FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E4F491-2E12-4CA3-9CAA-F4998FEA3FA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

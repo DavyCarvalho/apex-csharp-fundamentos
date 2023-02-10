@@ -159,4 +159,25 @@ namespace CapituloQuinzeConectandoAoSqlServer
             Quantidade = quantidade;
         }
     }
+
+    /*
+    
+    CREATE DATABASE Ex016
+
+    CREATE TABLE Produto (
+	    Id INT IDENTITY(1,1),
+	    Descricao VARCHAR(20),
+	    Quantidade INT,
+	
+	    PRIMARY KEY(Id)
+    )
+
+    INSERT INTO Produto VALUES 
+    ('Geladeira', 30),
+    ('Celular', 150),
+    ('Mesa', 10)
+
+    SELECT * FROM Produto ORDER BY Id Desc
+
+    */
 }
