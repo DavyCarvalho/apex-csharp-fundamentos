@@ -25,9 +25,9 @@ namespace CapituloQuinzeConectandoAoSqlServer
 
                 while (linhasRetornadasDaQuery.Read())
                 {
-                    int idDoProduto = Convert.ToInt32(linhasRetornadasDaQuery["ID"]);
-                    string descricaoDoProduto = linhasRetornadasDaQuery["DESCRICAO"].ToString();
-                    int quantidadeDoProduto = Convert.ToInt32(linhasRetornadasDaQuery["QUANTIDADE"]);
+                    int idDoProduto = Convert.ToInt32(linhasRetornadasDaQuery["Id"]);
+                    string descricaoDoProduto = linhasRetornadasDaQuery["Descricao"].ToString();
+                    int quantidadeDoProduto = Convert.ToInt32(linhasRetornadasDaQuery["Quantidade"]);
 
                     Produto objetoDeProduto = new Produto(idDoProduto, descricaoDoProduto, quantidadeDoProduto);
 
