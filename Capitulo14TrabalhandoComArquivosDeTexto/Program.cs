@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 
 namespace Capitulo14TrabalhandoComArquivosDeTexto
@@ -7,11 +8,14 @@ namespace Capitulo14TrabalhandoComArquivosDeTexto
     {
         static void Main(string[] args)
         {
-            StreamReader streamReader = new StreamReader(@"C:\Users\davy.carvalho\source\repos\apex-csharp-fundamentos\CapituloQuatorze\ArquivoDeTexto.txt", Encoding.UTF8);
+            StreamReader streamReader =
+                new StreamReader(@"C:\Users\davy.carvalho\source\repos\apex-csharp-fundamentos\Capitulo14TrabalhandoComArquivosDeTexto\ArquivoDeTexto.txt", Encoding.UTF8);
+
             while (!streamReader.EndOfStream)
             {
                 string linha = streamReader.ReadLine();
-                //Aqui, quando estamos em debug, visualizar o valor de cada linha do arquivo.
+
+                Console.WriteLine(linha);
             }
         }
     }
