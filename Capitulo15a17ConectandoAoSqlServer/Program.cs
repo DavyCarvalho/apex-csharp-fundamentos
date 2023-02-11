@@ -5,179 +5,73 @@ namespace CapituloQuinzeConectandoAoSqlServer
 {
     class Program
     {
-        const string stringDeConexao = @"Server=localhost\SQLEXPRESS;Database=Ex16;Trusted_Connection=True;";
+        const string stringDeConexao = @"Server=localhost\SQLEXPRESS;Database=Ex016;Trusted_Connection=True;";
 
         static void Main(string[] args)
         {
-            SqlConnection connection = new SqlConnection(stringDeConexao);
-            
-            //Leitura de Dados - Início
+            var connection = new SqlConnection(stringDeConexao);
 
+            //Leitura de dados - Inicio
             try
             {
                 connection.Open();
-                Console.WriteLine("Conexão com o Banco de Dados aberta com sucesso!\n");
+                Console.WriteLine("A conexão foi aberta com sucesso");
 
-                string comandoSqlParaSelecionar = @"SELECT * FROM Produto ORDER BY Descricao";
+                var comandoSqlDeLeitura = "SELECT * FROM Produto ORDER BY Id DESC";
 
-                SqlCommand command = new SqlCommand(comandoSqlParaSelecionar, connection);
-                SqlDataReader linhasRetornadasDaQuery = command.ExecuteReader();
+                var comando = new SqlCommand(comandoSqlDeLeitura, connection);
+
+                var linhasRetornadasDaQuery = comando.ExecuteReader();
 
                 while (linhasRetornadasDaQuery.Read())
                 {
-                    int idDoProduto = Convert.ToInt32(linhasRetornadasDaQuery["Id"]);
-                    string descricaoDoProduto = linhasRetornadasDaQuery["Descricao"].ToString();
-                    int quantidadeDoProduto = Convert.ToInt32(linhasRetornadasDaQuery["Quantidade"]);
+                    var idDoRegistro = Convert.ToInt32(linhasRetornadasDaQuery["Id"]);
+                    var descricaoDoRegistro = linhasRetornadasDaQuery["Descricao"];
+                    var quantidadeDoRegistro = Convert.ToInt32(linhasRetornadasDaQuery["Quantidade"]);
 
-                    Produto objetoDeProduto = new Produto(idDoProduto, descricaoDoProduto, quantidadeDoProduto);
-
-                    Console.WriteLine($"O Id do Produto é {objetoDeProduto.Id}");
-                    Console.WriteLine($"A Quantidade do Produto é {objetoDeProduto.Quantidade}");
-                    Console.WriteLine($"A Descrição do Produto é {objetoDeProduto.Descricao}\n");
+                    Console.WriteLine($"O Id do registro é: {idDoRegistro}");
+                    Console.WriteLine($"A descrição do registro é: {descricaoDoRegistro}");
+                    Console.WriteLine($"A quantidade do registro é: {quantidadeDoRegistro}");
                 }
-
-                Console.WriteLine("Ação de Leitura executada com sucesso! Pressione ENTER para seguir.");
-                Console.ReadLine();
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Ocorreu um erro ao abrir a conexão com o Banco de Dados");
+                Console.WriteLine(ex.Message);
             }
             finally
             {
                 connection.Close();
-                Console.WriteLine("Conexão com o Banco de Dados fechada com sucesso!");
             }
-
             //Leitura de dados - Fim
 
             //Inserção de dados - Início
-
             try
             {
                 connection.Open();
 
-                string descricao = "Banana";
-                int quantidade = 10;
-                string comandoSqlParaInserir = @"INSERT INTO Produto (Descricao, Quantidade) VALUES (@descricao, @quantidade)";
+                var descricaoDoNovoProduto = "Maçã";
+                var quantidadeDoNovoProduto = 500;
 
-                SqlCommand command = new SqlCommand(comandoSqlParaInserir, connection);
+                var comandoSqlDeCriacaoDeProduto = @"INSERT INTO Produto VALUES
+                                                     (@descricaoDoNovoProduto, @quantidadeDoNovoProduto)";
 
-                command.Parameters.AddWithValue("@descricao", descricao);
-                command.Parameters.AddWithValue("@quantidade", quantidade);
+                var comando = new SqlCommand(comandoSqlDeCriacaoDeProduto, connection);
 
-                command.ExecuteNonQuery();
+                comando.Parameters.AddWithValue("@descricaoDoNovoProduto", descricaoDoNovoProduto);
+                comando.Parameters.AddWithValue("@quantidadeDoNovoProduto", quantidadeDoNovoProduto);
 
-                Console.WriteLine("Ação de Inserção executada com sucesso! Pressione ENTER para seguir.");
-                Console.ReadLine();
+                comando.ExecuteNonQuery();
+
+                Console.WriteLine("");
             }
-            catch (Exception exception)
+            catch (Exception ex)
             {
-                Console.WriteLine(exception.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
                 connection.Close();
             }
-
-            //Inserção de dados - Fim
-
-            //Atualização de dados - Início
-
-            try
-            {
-                connection.Open();
-
-                string novaDescricao = "Caju";
-                int idDoRegistroQueSeraAtualizado = 2;
-                string comandoSqlParaAtualizarDescricao = @"UPDATE Produto 
-                                                            SET Descricao = @novaDescricao 
-                                                            WHERE Id = @idDoRegistroQueSeraAtualizado";
-
-                SqlCommand command = new SqlCommand(comandoSqlParaAtualizarDescricao, connection);
-
-                command.Parameters.AddWithValue("@novaDescricao", novaDescricao);
-                command.Parameters.AddWithValue("@idDoRegistroQueSeraAtualizado", idDoRegistroQueSeraAtualizado);
-
-                command.ExecuteNonQuery();
-
-                Console.WriteLine("Ação de Atualização executada com sucesso! Pressione ENTER para seguir.");
-                Console.ReadLine();
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            //Atualização de dados - Fim
-
-            //Exclusão de dados - Início
-
-            try
-            {
-                connection.Open();
-
-                int idDoRegistroASerApagado = 1;
-                string comandoSqlApagarUmRegistro = @"DELETE FROM Produto WHERE Id = @idDoRegistroASerApagado";
-
-                SqlCommand command = new SqlCommand(comandoSqlApagarUmRegistro, connection);
-
-                command.Parameters.AddWithValue("@idDoRegistroASerApagado", idDoRegistroASerApagado);
-
-                command.ExecuteNonQuery();
-
-                Console.WriteLine("Ação de Exclusão executada com sucesso! Pressione ENTER para finalizar.");
-                Console.ReadLine();
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            //Exclusão de dados - Fim
         }
     }
-
-    class Produto
-    {
-        public int Id { get; set; }
-        public string Descricao { get; set; }
-        public decimal Quantidade { get; set; }
-
-        public Produto(int id, string descricao, decimal quantidade)
-        {
-            Id = id;
-            Descricao = descricao;
-            Quantidade = quantidade;
-        }
-    }
-
-    /*
-    
-    CREATE DATABASE Ex016
-
-    CREATE TABLE Produto (
-	    Id INT IDENTITY(1,1),
-	    Descricao VARCHAR(20),
-	    Quantidade INT,
-	
-	    PRIMARY KEY(Id)
-    )
-
-    INSERT INTO Produto VALUES 
-    ('Geladeira', 30),
-    ('Celular', 150),
-    ('Mesa', 10)
-
-    SELECT * FROM Produto ORDER BY Id Desc
-
-    */
 }
