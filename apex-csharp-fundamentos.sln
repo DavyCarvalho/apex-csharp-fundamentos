@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo22EstruturaDosFormu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo23WinFormsValidacoes", "WinFormsValidacoes\Capitulo23WinFormsValidacoes.csproj", "{2055AA3A-E730-49E0-BA74-A5272778A8F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo24RegrasDeNegócio", "Capitulo24RegrasDeNegócio\Capitulo24RegrasDeNegócio.csproj", "{29A3C329-6648-4D27-B1D7-04F774D7CD95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo25Relatorios", "Capitulo25Relatorios\Capitulo25Relatorios.csproj", "{29BD5288-A991-4C1F-9226-E464C479C3F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{2055AA3A-E730-49E0-BA74-A5272778A8F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2055AA3A-E730-49E0-BA74-A5272778A8F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2055AA3A-E730-49E0-BA74-A5272778A8F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A3C329-6648-4D27-B1D7-04F774D7CD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A3C329-6648-4D27-B1D7-04F774D7CD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A3C329-6648-4D27-B1D7-04F774D7CD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A3C329-6648-4D27-B1D7-04F774D7CD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29BD5288-A991-4C1F-9226-E464C479C3F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BD5288-A991-4C1F-9226-E464C479C3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BD5288-A991-4C1F-9226-E464C479C3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BD5288-A991-4C1F-9226-E464C479C3F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
